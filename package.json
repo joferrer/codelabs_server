@@ -17,6 +17,8 @@
     "fs": "^0.0.1-security",
     "markdownlint": "^0.29.0",
     "marked": "^5.1.0",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.3.0",
     "multer": "^1.4.5-lts.1",
     "path": "^0.12.7",
     "ts-node": "^10.9.1",
