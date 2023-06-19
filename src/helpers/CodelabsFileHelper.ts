@@ -12,7 +12,6 @@ export const extractZip = async (zipFilePath: string) => {
 
   // Crea la carpeta temporal si no existe
   if (!fs.existsSync(tempFolderPath)) {
-    console.log("asasaa");
     fs.mkdirSync(tempFolderPath);
   }
 
