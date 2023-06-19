@@ -1,8 +1,13 @@
 import express from "express";
 import { getCodelabById, getConexion, saveCodelab } from "../controllers/codelabsController";
 import multer from 'multer'
+import fs from "fs";
 
 const router = express.Router();
+
+if(!fs.existsSync("codelabs/")) fs.mkdirSync("codelabs/")
+if(!fs.existsSync("temp/")) fs.mkdirSync("temp/")
+
 
 // Configurar la ubicación de almacenamiento de multer
 const storage = multer.diskStorage({
