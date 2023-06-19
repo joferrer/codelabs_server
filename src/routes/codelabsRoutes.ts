@@ -1,5 +1,5 @@
 import express from "express";
-import { getCodelabById, getConexion, saveCodelab } from "../controllers/codelabsController";
+import { getAllCodelabsInfo, getCodelabById, getConexion, saveCodelab } from "../controllers/codelabsController";
 import multer from 'multer'
 import fs from "fs";
 
@@ -23,5 +23,6 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 router.post("/publicar", upload.single("file"),saveCodelab);
+router.get("/all",getAllCodelabsInfo)
 router.get("/",getConexion)
 export default router;

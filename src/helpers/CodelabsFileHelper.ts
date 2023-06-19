@@ -5,6 +5,7 @@ import marked from "marked";
 import path from "path";
 import crypto from "crypto";
 import { ResponseS } from "./Class";
+import { extractCodelabProps } from "./ExtractCodelabConfig";
 
 
 export const extractZip = async (zipFilePath: string) => {
@@ -61,6 +62,9 @@ export const veirifyCodelabs = async (): Promise<ResponseS[]> => {
 
     // Ignora subcarpetas y otros tipos de archivos
     const fileStat = await fs.promises.stat(filePath);
+
+    
+
     if (
       fileStat.isFile() &&
       !file.includes(".zip") &&
@@ -71,8 +75,18 @@ export const veirifyCodelabs = async (): Promise<ResponseS[]> => {
         responsesList.push(verifyCodelabFile);
       }
     }
+    if(file.includes("contenido")){
+      const props = await extractCodelabProps(filePath)   
+      console.log(props)   
+      responsesList.push(new ResponseS(true,"Contenido", props))
+    }
+
+
   }
-  if (responsesList.length === 0) moveFilesToTargetFolder();
+  if (responsesList.length === 1){ 
+    const hash = moveFilesToTargetFolder();
+    responsesList[0].data = {...responsesList[0].data ,filename: hash}
+  }
   removeTempArchive("temp/");
   removeTempArchive(codelabsFolderPath)
   console.log("AK:" + responsesList.length);
@@ -116,7 +130,7 @@ export const convertMarkdownToHtml = (markdownPath: string): string => {
 };
 
 
-const moveFilesToTargetFolder = () => {
+const moveFilesToTargetFolder = ():string => {
   const sourceFolderPath = path.join(__dirname, "temp");
   const targetFolderName = "codelabs/";
 
@@ -147,4 +161,5 @@ const moveFilesToTargetFolder = () => {
 
   console.log("Archivos movidos exitosamente.");
   console.log(`Carpeta de destino: ${targetFolderPath}`);
+  return targetFolderNameWithHash
 };
