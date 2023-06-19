@@ -1,14 +1,23 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
 // Definición del esquema y el modelo
-interface ICodelab extends Document {
+export interface ICodelab {
   titulo: string;
+  descripcion: string;
   autor: string;
+  contenido: string[];
+  tags: string[];
+  filename: string;
+
 }
 
 const CodelabSchema = new Schema<ICodelab>({
   titulo: { type: String, required: true },
+  descripcion: { type: String, required: true },
   autor: { type: String, required: true },
+  contenido: { type: [String], required: true },
+  tags: { type: [String], required: true },
+  filename: { type: String, required: true },
 });
 
 export const CodelabModel = mongoose.model<ICodelab>('Codelab', CodelabSchema);
