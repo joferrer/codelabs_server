@@ -1,8 +1,10 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+dotenv.config();
 
-console.log("a")
-const uri = "mongodb+srv://codelabuser:f2eAQZkKKlPVD6Cm@codelabs.8nvffkx.mongodb.net/?retryWrites=true&w=majority";
 
+const uri = process.env.MONGO_URL || "Error"
+console.log("a",uri)
 mongoose.connect(uri)
   .then(() => {
     console.log('Connected to MongoDB');
