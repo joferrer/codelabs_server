@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add codelab</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Codelabs</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor01"
+          aria-controls="navbarColor01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#"
+                >Add codelab<span class="visually-hidden">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./howToUse.html">How to use</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./aboutUs.html">About us</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-sm-2"
+              type="search"
+              placeholder="Search"
+            />
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-3">
+      <div class="row">
+      <h1 id="titleCodelab">Create codelab</h1>
+        <div class="card border-primary mb-6 col-4 mt-3" style="max-width: 27rem">
+          <div class="card-body">
+            <div class="form-group">
+              <h4 class="card-title">New codelab</h4>
+              <label for="formFile" class="form-label mt-4 card-text"
+                >Add codelab with zip <a href="">structure.</a></label
+              >
+              <div class="col text-center">
+                <input class="form-control" type="file" id="formFile" />
+                <button type="button" class="btn btn-success mt-2">Create my codelab</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1">
+        </div>
+        <div class="col-7 ml-4">
+          <div class="card border-info mb-3 mt-3" style="max-width: 35rem">
+            <div class="card-header">How structure should be've my codelab?</div>
+            <div class="card-body">
+              <h4 class="card-title">Info card title</h4>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
