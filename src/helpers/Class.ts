@@ -2,12 +2,12 @@
 export class ResponseS {
     status: boolean;
     message: string;
-    body: any;
-    constructor(pStatus: boolean,pMessage: string, pBody?:any){
+    data: any;
+    constructor(pStatus: boolean,pMessage: string, pdata?:any){
         this.status = pStatus
         this.message = pMessage
-        if(pBody) this.body = pBody
-        else this.body =  pBody || {};
+        if(pdata) this.data = pdata
+        else this.data =  pdata || {};
     }
 
     toJson(): string {
@@ -16,36 +16,3 @@ export class ResponseS {
     
 }
 
-export class ResponseJSON {
-    status: boolean;
-    message: JSON;
-    body: any;
-    constructor(pStatus: boolean,pMessage: JSON, pBody?:any){
-        this.status = pStatus
-        this.message = pMessage
-        if(pBody) this.body = pBody
-        else this.body =  pBody || {};
-    }
-
-    toJson(): string {
-        return JSON.stringify(this);
-      }
-    
-}
-
-export class ResponseArray{
-    status: boolean;
-    message: [];
-    body: any;
-    constructor(pStatus: boolean,pMessage: [], pBody?:any){
-        this.status = pStatus
-        this.message = pMessage
-        if(pBody) this.body = pBody
-        else this.body =  pBody || {};
-    }
-
-    toJson(): string {
-        return JSON.stringify(this);
-      }
-    
-}
