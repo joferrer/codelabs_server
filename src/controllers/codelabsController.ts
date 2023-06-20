@@ -46,7 +46,7 @@ export const saveCodelab = async (req: Request, res: Response) => {
                 tags: contenido.tags,
                 filename: contenido.filename,
               };
-              console.log("khe es esto: ",nuevoCodelab)
+
             const codelabCreado = await CodelabModel.create(nuevoCodelab);
             return res.status(200).json(
                 new ResponseS(
@@ -59,7 +59,7 @@ export const saveCodelab = async (req: Request, res: Response) => {
             return res.status(400).json(
                 new ResponseS(
                     false,
-                    `No se pudo guardar en la db ${error}`,
+                    `Ha ocurrido un error: Verifique que el archivo contenido.md esté bien escrito. ${error}`,
                     result)
             )
         }
