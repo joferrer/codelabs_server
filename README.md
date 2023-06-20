@@ -8,7 +8,7 @@
 3. 🔗 [Tecnologies](#3--tecnologies)
 4. ⚡ [Instalation](#4-%EF%B8%8F-instalation)
 5. 📫 [License](#5--license)
-6. 👯‍ [Authors](#6-%EF%B8%8F-authors)
+6. 👯‍ [Authors and roles](#6-%EF%B8%8F-authors-and-roles)
 7. 🏛 [Academic Institution](#7--academic-institution)
 8. 👩‍💻 [Documentation](#8--documentation)
 
@@ -74,17 +74,17 @@ TypeScript is a strongly typed programming language that builds on JavaScript, g
 
 **Free Software !!! :D**
 
-## 6. 👯‍♀️ Authors
+## 6. 👯‍♀️ Authors and roles 
 
-- [@Gederson Gustavo](https://github.com/GedersonG)
+- [@Gederson Gustavo](https://github.com/GedersonG) [FrontEnd Developer]
 
-- [@Camilo Ramirez](https://www.github.com/CamiloRamirezP)
+- [@Camilo Ramirez](https://www.github.com/CamiloRamirezP) [Documenter]
 
-- [@Daniela Sanchez](https://www.github.com/DanielaSanchezb)
+- [@Daniela Sanchez](https://www.github.com/DanielaSanchezb) [Documenter]
 
-- [@Jeison Ferrer](https://www.github.com/joferrer)
-
-- [@Jhonny Guarin](https://www.github.com/JhonnyGCH)
+- [@Jeison Ferrer](https://www.github.com/joferrer) [BackEnd Developer, DataBase Developer]
+ 
+- [@Jhonny Guarin](https://www.github.com/JhonnyGCH) [Documenter, Designer]
 
   
 ## 7. 🏛 Academic Institution
