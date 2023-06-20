@@ -56,6 +56,7 @@ export const veirifyCodelabs = async (): Promise<ResponseS[]> => {
   const codelabsFolderPath = path.join(__dirname, "temp"); // Ruta de la carpeta "temp"
   const responsesList: ResponseS[] = [];
   const files = await fs.promises.readdir(codelabsFolderPath);
+  let errorfinded: boolean = false
 
   for (const file of files) {
     const filePath = path.join(codelabsFolderPath, file);
@@ -72,6 +73,7 @@ export const veirifyCodelabs = async (): Promise<ResponseS[]> => {
     ) {
       const verifyCodelabFile = await verifyCodelab(filePath);
       if (!verifyCodelabFile.status) {
+        errorfinded = true
         responsesList.push(verifyCodelabFile);
       }
     }
@@ -83,7 +85,7 @@ export const veirifyCodelabs = async (): Promise<ResponseS[]> => {
 
 
   }
-  if (responsesList.length === 1){ 
+  if (!errorfinded){ 
     const hash = moveFilesToTargetFolder();
     responsesList[0].data = {...responsesList[0].data ,filename: hash}
   }
