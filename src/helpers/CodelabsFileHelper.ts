@@ -55,6 +55,8 @@ export const removeTempArchive = (folder: string) => {
 export const veirifyCodelabs = async (): Promise<ResponseS[]> => {
   const codelabsFolderPath = path.join(__dirname, "temp"); // Ruta de la carpeta "temp"
   const responsesList: ResponseS[] = [];
+  
+
   const files = await fs.promises.readdir(codelabsFolderPath);
   let errorfinded: boolean = false
 
@@ -78,9 +80,15 @@ export const veirifyCodelabs = async (): Promise<ResponseS[]> => {
       }
     }
     if(file.includes("contenido")){
-      const props = await extractCodelabProps(filePath)   
-      console.log(props)   
-      responsesList.push(new ResponseS(true,"Contenido", props))
+      try {
+        const props = await extractCodelabProps(filePath)   
+        console.log(props)
+        responsesList.push(new ResponseS(true,"Contenido", props))  
+      } catch (error) {
+        responsesList.push(new ResponseS(false,"Archivo contenido.md mal escrito"))
+        errorfinded = true
+      }
+      
     }
 
 
@@ -165,3 +173,29 @@ const moveFilesToTargetFolder = ():string => {
   console.log(`Carpeta de destino: ${targetFolderPath}`);
   return targetFolderNameWithHash
 };
+
+
+export const findCodelabByName = (fileName:string)=>{
+  const sourceFolderPath = "codelabs/"
+  const files = fs.readdirSync(sourceFolderPath);
+
+  const codelabPath:string = files.find((file) => file.includes(fileName)) || ""
+  if(codelabPath === "") {
+    return []
+  }
+
+  const pathCodelab = path.join(sourceFolderPath,codelabPath)
+  console.log(pathCodelab)
+
+  const codelabFiles  = fs.readdirSync(pathCodelab)
+  const codelabHtml:string[] = [] 
+
+  codelabFiles.forEach((file)=>{
+    console.log("file",file)
+    const pathFile = path.join(pathCodelab,file)
+     const pageHtml = convertMarkdownToHtml(pathFile)
+     codelabHtml.push(pageHtml)
+  })
+
+  return codelabHtml
+}

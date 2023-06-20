@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import { extractZip, veirifyCodelabs } from "../helpers/CodelabsFileHelper";
+import { extractZip, findCodelabByName, veirifyCodelabs } from "../helpers/CodelabsFileHelper";
 import { ResponseS } from "../helpers/Class";
 import { CodelabModel, ICodelab } from "../models/codelabModel";
 
@@ -7,10 +7,13 @@ export const getConexion = (req: Request, res: Response) => {
     res.status(200).send("Bienvenido !")
 }
 
-export const getCodelabById = (req: Request, res: Response) => {
-    const pt = req.body
-    console.log(pt)
-    res.json(pt)
+export const getCodelabByName = (req: Request, res: Response) => {
+    console.log(req.params)
+    const name = req.params.name
+    console.log(name)
+    
+    const codelabByname = findCodelabByName(name)
+    res.status(200).json(new ResponseS(true,"",codelabByname))
 
 }
 

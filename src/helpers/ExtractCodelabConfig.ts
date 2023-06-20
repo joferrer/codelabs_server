@@ -8,18 +8,24 @@ export const extractCodelabProps = (filePath: string): Promise<any> => {
         reject(err);
         return;
       }
-      const propsCodelab = data.split('#')
-
-       // Extraer el título, contenido, tags y autor del contenido del archivo Markdown
-        const title = extractTitle(propsCodelab[1]);
-        const descrip = extractDescription(propsCodelab[2]);
-        const content = extractContent(propsCodelab[3]);
-        const author = extractAuthor(propsCodelab[4]);
-        const tags = extractTags(propsCodelab[5]);
+        const propsCodelab = data.split('#')
+        try {
+            // Extraer el título, contenido, tags y autor del contenido del archivo Markdown
+            const title = extractTitle(propsCodelab[1]);
+            const descrip = extractDescription(propsCodelab[2]);
+            const content = extractContent(propsCodelab[3]);
+            const author = extractAuthor(propsCodelab[4]);
+            const tags = extractTags(propsCodelab[5]);
         
-      resolve({
-        title,descrip,content,author,tags
-      });
+            resolve({
+                title,descrip,content,author,tags
+            });    
+        } catch (error) {
+            console.log("aa", error)
+            reject(error)
+            return;
+        }
+        
     });
   });
 };
