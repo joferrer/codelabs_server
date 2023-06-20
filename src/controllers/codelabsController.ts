@@ -48,6 +48,7 @@ export const saveCodelab = async (req: Request, res: Response) => {
                 contenido: contenido.content,
                 tags: contenido.tags,
                 filename: contenido.filename,
+                calificacion: 0,
               };
 
             const codelabCreado = await CodelabModel.create(nuevoCodelab);
