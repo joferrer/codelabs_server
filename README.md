@@ -15,16 +15,19 @@
 ## 1. 🤔 General Information
 
 ### ![Web aplication](https://img.shields.io/badge/Web_Aplication-ff69b4)
+The project consists of the development of a web application that seeks to provide access to interactive learning resources to people with a low level of technological ability and software development. The application will allow users to create and deploy codelabs, which are step-by-step interactive tutorials, with the aim of facilitating the learning process.
 
+The web application will focus on offering an intuitive and friendly interface so that anyone, regardless of their level of technical knowledge, can use it without difficulty. Special attention will be paid to usability and user experience, ensuring that the platform is accessible and attractive.
 
-#### ![Add to Favorites](https://img.shields.io/badge/Add_to_Favorites-yellow)
+#### ![Catalogue](https://img.shields.io/badge/Catalogue-green)
+
+#### ![Add and generate Codelabs](https://img.shields.io/badge/Add_and_generate_Codelabs-yellow)
 
 #### ![Filtering](https://img.shields.io/badge/Filtering-9cf)
 
-#### ![Add, edit or delete products](https://img.shields.io/badge/Add,_edit_or_delete_products-succes)
+#### ![Edit Codelabs](https://img.shields.io/badge/Edit_Codelabs-succes)
 
-
-#### ![Add, edit or delete categories](https://img.shields.io/badge/Add,_edit_or_delete_categories-informational)
+#### ![Rate Codelabs](https://img.shields.io/badge/Rate_codelabs-red)
 
 
 ## 2. 💻 Architecture
