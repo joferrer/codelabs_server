@@ -107,9 +107,9 @@ Project developed in the subject Software Architecture of the [Systems Engineeri
 1. npm install
 2. npm start
 
-# Rutas de la API
+### Rutas de la API
 
-## Codelabs - (codelabs/*)
+### Codelabs - (codelabs/*)
 
 ### GET: "/all"
 
