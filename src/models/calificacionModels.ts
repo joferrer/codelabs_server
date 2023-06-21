@@ -1,10 +1,10 @@
 import mongoose, { Schema } from 'mongoose';
 
-export class Calificiacion{
+export class Calificacion{
     idUsuario: string
     calificacion: number
-    constructor({pIdUsuario="0",calificacion=0}){
-        this.idUsuario = pIdUsuario
+    constructor({idUsuario,calificacion=0}:{ idUsuario: string; calificacion?: number }){
+        this.idUsuario = idUsuario
         this.calificacion = calificacion
     }
 }
@@ -12,13 +12,14 @@ export class Calificiacion{
 // Definición del esquema y el modelo
 export interface ICalificacion {
   idcodelab: string;
-  calificiaciones: Calificiacion[];
+  calificaciones: Calificacion[];
+ 
 
 }
 
 const CalificacionSchema = new Schema<ICalificacion>({
   idcodelab: { type: String, required: true },
-  calificiaciones: { type: [Calificiacion], required: true },
+  calificaciones: { type: [], required: true },
 
  
 });

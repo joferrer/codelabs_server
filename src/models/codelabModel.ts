@@ -9,6 +9,7 @@ export interface ICodelab {
   tags: string[];
   filename: string;
   calificacion: number;
+  fechaCreacion?: Date;
 
 }
 
@@ -20,6 +21,8 @@ const CodelabSchema = new Schema<ICodelab>({
   tags: { type: [String], required: true },
   filename: { type: String, required: true },
   calificacion: { type: Number, required: true },
+  fechaCreacion: { type: Date, default: Date.now }
 });
+
 
 export const CodelabModel = mongoose.model<ICodelab>('Codelab', CodelabSchema);
