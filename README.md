@@ -20,20 +20,18 @@ The project consists of the development of a web application that seeks to provi
 The web application will focus on offering an intuitive and friendly interface so that anyone, regardless of their level of technical knowledge, can use it without difficulty. Special attention will be paid to usability and user experience, ensuring that the platform is accessible and attractive.
 
 #### ![Catalogue](https://img.shields.io/badge/Catalogue-green)
+The Home of the web application presents a catalog of codelabs, needs users easy access to interactive learning resources. The catalog is organized by categories and tags, allowing users to browse and filter codelabs based on their areas of interest.
 
 #### ![Add and generate Codelabs](https://img.shields.io/badge/Add_and_generate_Codelabs-yellow)
-
-#### ![Filtering](https://img.shields.io/badge/Filtering-9cf)
-
+Uploading a ZIP file with a codelab and deploying it involves uploading and running a set of related files that make up the codelab. This process allows users to access and use the interactive learning content provided in the codelab.
 #### ![Edit Codelabs](https://img.shields.io/badge/Edit_Codelabs-succes)
-
+Download ZIP File for Editing is a feature that allows users to obtain a compressed copy of a project or set of files, giving them the ability to make changes or work on them locally.
 #### ![Rate Codelabs](https://img.shields.io/badge/Rate_codelabs-red)
 
 
 ## 2. 💻 Architecture
   
-  Arcitecture hERE
-  
+   
   
   <div align="center">
    <img src="https://raw.githubusercontent.com/JhonnyGCH/img/main/arquitectura.png" width="800" height="340">
