@@ -31,10 +31,13 @@ Download ZIP File for Editing is a feature that allows users to obtain a compres
 
 ## 2. 💻 Architecture
   
-   
+   El proyecto web para la creación y despliegue de codelabs interactivos utiliza una arquitectura en capas para lograr un diseño modular, escalable y mantenible. En la capa de presentación, utilizamos HTML y CSS para desarrollar una interfaz de usuario responsiva y atractiva. Utilizamos también TypeScript para implementar la lógica de presentación, aprovechando las ventajas de un lenguaje de programación orientado a objetos y estáticamente tipado.
+En la capa de lógica de aplicación, se encuentra la lógica empresarial de la aplicación. Aquí, implementamos algoritmos y reglas de negocio para la creación, personalización y gestión de codelabs. Utilizamos TypeScript para construir componentes reutilizables y modularizar la lógica de la aplicación, lo que nos permite mejorar la mantenibilidad y la legibilidad del código.
+Si bien actualmente incorporamos una base de datos MongoDB no relacional, nuestra arquitectura en capas permite una fácil integración de una capa de acceso a datos en el futuro. Esto nos permite incorporar un sistema de almacenamiento persistente para codelabs y administrar de manera efectiva la información asociada.
+
   
   <div align="center">
-   <img src="https://raw.githubusercontent.com/JhonnyGCH/img/main/arquitectura.png" width="800" height="340">
+   <img src="https://raw.githubusercontent.com/JhonnyGCH/img/main/arquitectura2.png" width="800" height="340">
 </div>
   
 
