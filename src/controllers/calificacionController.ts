@@ -58,10 +58,10 @@ export const postCalificacion = async (req: Request, res: Response) => {
     
     const nuevaCalificacion: Calificacion = new Calificacion({idUsuario,calificacion: pcalificacion})  
     const calificacionesActualizadas = [...codelabCalificaciones, nuevaCalificacion ]
-    console.log("a",calificacionesActualizadas)
+ 
     await CalificacionModel.updateOne({idcodelab: idcodelabBusqueda},{calificaciones: calificacionesActualizadas})
     const nuevaCalificacionPromedio = (nuevaCalificacion.calificacion + codelab.calificacion) / calificacionesActualizadas.length
-    console.log("p",nuevaCalificacionPromedio)
+
     await CodelabModel.updateOne({_id:idcodelabBusqueda},{calificacion:nuevaCalificacionPromedio})
     
     return res.status(200).json(new ResponseS(true, "Se califico el codelab correctamente."))

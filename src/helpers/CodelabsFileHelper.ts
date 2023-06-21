@@ -65,9 +65,6 @@ export const veirifyCodelabs = async (): Promise<ResponseS[]> => {
 
     // Ignora subcarpetas y otros tipos de archivos
     const fileStat = await fs.promises.stat(filePath);
-
-    
-
     if (
       fileStat.isFile() &&
       !file.includes(".zip") &&
@@ -83,6 +80,11 @@ export const veirifyCodelabs = async (): Promise<ResponseS[]> => {
       try {
         const props = await extractCodelabProps(filePath)   
         console.log(props)
+        if(files.length -1 != props.content.length){
+          responsesList.push(new ResponseS(false,"La cantidad de paginas enviadas y las descritas en el contenido no son iguales."))
+          errorfinded = true
+        }
+
         responsesList.push(new ResponseS(true,"Contenido", props))  
       } catch (error) {
         responsesList.push(new ResponseS(false,"Archivo contenido.md mal escrito"))
@@ -99,7 +101,7 @@ export const veirifyCodelabs = async (): Promise<ResponseS[]> => {
   }
   removeTempArchive("temp/");
   removeTempArchive(codelabsFolderPath)
-  console.log("AK:" + responsesList.length);
+
   return responsesList;
 };
 
