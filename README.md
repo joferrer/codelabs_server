@@ -49,7 +49,7 @@ The web application will focus on offering an intuitive and friendly interface s
 | [![CSS](https://img.shields.io/badge/CSS-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS)                                     | Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media. |
 | [![TypeScript](https://img.shields.io/badge/TypeScript-blue)](https://www.typescriptlang.org/) | TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale. |
 | [![Bootstrap](https://img.shields.io/badge/Bootstrap-purple)](https://getbootstrap.com/) | Bootstrap is the most popular CSS Framework for developing responsive and mobile-first websites. Bootstrap 5 is the newest version of Bootstrap. |
-| [![Railway](https://img.shields.io/badge/Dockers-blue)](https://www.docker.com/products/docker-desktop/) | Railway is an infrastructure platform where you can provision infrastructure, develop with that infrastructure locally, and then deploy to the cloud. 
+| [![Railway](https://img.shields.io/badge/Railway-blue)](https://www.docker.com/products/docker-desktop/) | Railway is an infrastructure platform where you can provision infrastructure, develop with that infrastructure locally, and then deploy to the cloud. 
 
 ## 4. ⚡️ Instalation
 
