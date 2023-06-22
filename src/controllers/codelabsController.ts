@@ -31,6 +31,7 @@ export const saveCodelab = async (req: Request, res: Response) => {
 
     const archivo: string = req.file?.path || ""
     console.log("LLega: ", archivo)
+    if(archivo == "") return res.status(400).json(new ResponseS(false, "No se enocntró ningún archivo"))
     const zipFilePath = await extractZip(archivo)
 
     if (zipFilePath === "") return res.status(400).json(
